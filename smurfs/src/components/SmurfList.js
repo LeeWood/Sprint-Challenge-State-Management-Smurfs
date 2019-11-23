@@ -23,7 +23,12 @@ const SmurfList = props => {
         <>
           <div>
             {props.smurfs.map(smurf => (
+              <>
               <h4 key={smurf.id}>{smurf.name}</h4>
+              <p>height: {smurf.height}</p>
+              <p>age: {smurf.age}</p>
+              </>
+              //todo impement smurf card for display?
             ))}
           </div>
         </>
