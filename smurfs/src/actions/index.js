@@ -10,14 +10,14 @@ export const getSmurfData = () => dispatch => {
   axios
     .get("http://localhost:3333/smurfs")
     .then(result => {
-      console.log(result);
+      //console.log(result);
       dispatch({
         type: SMURF_DATA_SUCCESS,
         payload: result.data
       })
     })
     .catch(error => {
-      console.log(error)
+      //console.log(error)
       dispatch({
         type: SMURF_DATA_FAIL,
         payload: `error: ${error.request.status}...`
@@ -26,7 +26,7 @@ export const getSmurfData = () => dispatch => {
 }
 
 export function addNewSmurf(newSmurf) {
-  console.log('action', newSmurf);
+  //console.log('action', newSmurf);
   return {
     type: NEW_SMURF,
     payload: newSmurf

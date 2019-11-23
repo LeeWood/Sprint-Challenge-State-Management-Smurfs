@@ -28,7 +28,7 @@ const SmurfList = props => {
                 <h4>Name: {smurf.name}</h4>
                 <p>height: {smurf.height}</p>
                 <p>age: {smurf.age}</p>
-                {console.log("smurf info", smurf)}
+                {/*console.log("smurf info", smurf)*/}
               </div>
               //todo impement smurf card for display?
             ))}

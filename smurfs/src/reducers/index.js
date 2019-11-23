@@ -32,7 +32,7 @@ const reducer = (state = initialState, action) => {
           isLoading: false
         }
       case NEW_SMURF:
-        console.log("new smurf reducer:", action)
+        //console.log("new smurf reducer:", action)
         const newSmurf = {
           name: action.payload.newSmurfName,
           height: action.payload.newSmurfHeight,
