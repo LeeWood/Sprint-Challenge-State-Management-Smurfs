@@ -4,10 +4,10 @@ import { getSmurfData } from '../actions';
 
 const SmurfList = props => {
 
-  const fetchSmurfs = event => {
-    event.preventDefault();
-    props.getSmurfData();
-  };
+  // const fetchSmurfs = event => {
+  //   event.preventDefault();
+  //   props.getSmurfData();
+  // };
 
   return (
     <>
@@ -22,6 +22,7 @@ const SmurfList = props => {
       ) : (
         <>
           <div>
+            
             {props.smurfs.map(smurf => (
               <div key={smurf.id}>
                 <h4 key={smurf.id}>Name: {smurf.name}</h4>
