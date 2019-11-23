@@ -1,5 +1,12 @@
 body {
-  background-color:rgb(163, 207, 228);
+  /*app color variables*/
+  --light-blue: #A4DEF9;
+  --smurf-blue: #63B4D1;
+  --highlight: #a9bcd0;
+  --main-dark: #2b3d41;
+  --secondary-dark: #3e8989;
+  
+  background-color:var(--light-blue);
 }
 
 .App {

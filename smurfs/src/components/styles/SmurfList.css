@@ -2,7 +2,7 @@ header {
   display: flex;
   padding-top: 20px;
   justify-content: center;
-  background-color: #009FC8;
+  background-color: var(--smurf-blue);
 }
 
 .fetch-button {
