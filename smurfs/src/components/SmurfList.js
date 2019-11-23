@@ -31,7 +31,7 @@ const SmurfList = props => {
                 {props.smurfs.map(smurf => (
                   <div className="card" key={smurf.id}>
                     <h4 className="name-title">{smurf.name}</h4>
-                    <p className="sub-text">height: {smurf.height}</p>
+                    <p className="sub-text">height: {smurf.height}cm</p>
                     <p className="sub-text">age: {smurf.age}</p>
                     {/*console.log("smurf info", smurf)*/}
                   </div>

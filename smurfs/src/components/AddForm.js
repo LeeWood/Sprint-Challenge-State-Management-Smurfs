@@ -51,7 +51,7 @@ class AddForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="form-container">
         <h2>Add a Smurf!</h2>
         <form onSubmit={this.addSmurf}>
           <input
@@ -72,7 +72,7 @@ class AddForm extends React.Component {
             value={this.state.newSmurfAge}
             onChange={this.ageHandleChanges}
           />
-          <button type="submit">Add Smurf</button>
+          <button className="form-button"type="submit">Add Smurf</button>
         </form>
       </div>
     )
