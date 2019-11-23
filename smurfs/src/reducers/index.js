@@ -1,7 +1,8 @@
 import {
   SMURF_DATA_LOAD,
   SMURF_DATA_SUCCESS,
-  SMURF_DATA_FAIL
+  SMURF_DATA_FAIL,
+  NEW_SMURF
 } from '../actions';
 
 const initialState = {
@@ -30,6 +31,17 @@ const reducer = (state = initialState, action) => {
           error: action.payload,
           isLoading: false
         }
+      case NEW_SMURF:
+        console.log("new smurf reducer:", action)
+        const newSmurf = {
+          name: action.payload,
+          height: action.payload,
+          age: action.payload
+        };
+        return {
+          ...state,
+          smurfs: [...state.smurfs, newSmurf]
+        };
       default:
         return state;
   }
