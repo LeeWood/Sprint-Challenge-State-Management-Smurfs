@@ -34,9 +34,9 @@ const reducer = (state = initialState, action) => {
       case NEW_SMURF:
         console.log("new smurf reducer:", action)
         const newSmurf = {
-          name: action.payload.name,
-          height: action.payload.height,
-          age: action.payload.age,
+          name: action.payload.newSmurfName,
+          height: action.payload.newSmurfHeight,
+          age: action.payload.newSmurfAge,
           id: Date.now()
         };
         return {
