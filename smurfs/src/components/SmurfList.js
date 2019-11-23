@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getSmurfData } from '../actions';
+import './styles/SmurfList.css';
 
 const SmurfList = props => {
 
