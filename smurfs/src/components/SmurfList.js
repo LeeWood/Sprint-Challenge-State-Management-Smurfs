@@ -2,7 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getSmurfData } from '../actions';
 
-const SmurfCards = props => {
+const SmurfList = props => {
+
+  const fetchSmurfs = event => {
+    event.preventDefault();
+    props.getSmurfData();
+  };
 
   return (
     <>
@@ -11,6 +16,19 @@ const SmurfCards = props => {
       >
         Check Out Some Smurfs!
       </button>
+      {props.error&&<div>{props.error}</div>}
+      {props.isLoading ? (
+        <div>loading smurfs...</div>
+      ) : (
+        <>
+          <div>
+            {props.smurfs.map(smurf => (
+              <h4 key={smurf.id}>{smurf.name}</h4>
+            ))}
+          </div>
+        </>
+      )
+      }
     </>
   )
 
@@ -27,4 +45,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   { getSmurfData }
-)(SmurfCards);
+)(SmurfList);

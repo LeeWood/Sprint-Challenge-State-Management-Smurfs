@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SmurfCards from './SmurfCards';
+import SmurfCards from './SmurfList';
 import "./App.css";
 
 
