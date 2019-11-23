@@ -4,31 +4,48 @@ import { addNewSmurf } from '../actions';
 
 class AddForm extends React.Component {
   
-  state = {
-    newSmurfName: '',
-    newSmurfHeight: '',
-    newSmurfAge: '' 
-  };
+  state = 
+    {
+      newSmurfName: '',
+      newSmurfHeight: '',
+      newSmurfAge: '' 
+    } 
+  ;
 
   nameHandleChanges = event => {
-    this.setState({
-      newSmurfName: event.target.value
-    });
+    this.setState(
+      {
+        ...this.state,
+        newSmurfName: event.target.value
+      }
+    );
   };
   heightHandleChanges = event => {
-    this.setState({
-      newSmurfHeight: event.target.value
-    });
+    this.setState(
+      {
+        ...this.state,
+        newSmurfHeight: event.target.value
+      }
+    );
   };
   ageHandleChanges = event => {
-    this.setState({
-      newSmurfAge: event.target.value
-    });
+    this.setState(
+      {
+        ...this.state,
+        newSmurfAge: event.target.value
+      }
+    );
   };
 
   addSmurf = event => {
     event.preventDefault();
-    this.props.addNewSmurf(this.state.newSmurf)
+    this.props.addNewSmurf(this.state);
+    this.setState( {
+        newSmurfName: '',
+        newSmurfHeight: '',
+        newSmurfAge: '' 
+      } 
+    );
   }
 
   render() {
