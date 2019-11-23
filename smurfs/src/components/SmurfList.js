@@ -18,24 +18,22 @@ const SmurfList = props => {
         Check Out Some Smurfs!
       </button>
       {props.error&&<div>{props.error}</div>}
-      {props.isLoading ? (
-        <div>loading smurfs...</div>
-      ) : (
-        <>
-          <div>
-            
-            {props.smurfs.map(smurf => (
-              <div key={smurf.id}>
-                <h4>Name: {smurf.name}</h4>
-                <p>height: {smurf.height}</p>
-                <p>age: {smurf.age}</p>
-                {/*console.log("smurf info", smurf)*/}
-              </div>
-              //todo impement smurf card for display?
-            ))}
-          </div>
-        </>
-      )
+      {props.isLoading 
+        ? (
+          <div>loading smurfs...</div>
+        ) 
+        : (
+            <div className="card-container">
+              {props.smurfs.map(smurf => (
+                <div className="card" key={smurf.id}>
+                  <h4 className="name-title">{smurf.name}</h4>
+                  <p className="sub-text">height: {smurf.height}</p>
+                  <p className="sub-text">age: {smurf.age}</p>
+                  {/*console.log("smurf info", smurf)*/}
+                </div>
+              ))}
+            </div>
+          )
       }
     </>
   )
